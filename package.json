@@ -32,9 +32,12 @@
     "loader/"
   ],
   "scripts": {
+    "build:stencil": "stencil build",
+    "build:storybook": "storybook build",
     "start:stencil": "stencil build --watch",
     "start:storybook": "storybook dev -p 6006",
-    "start": "concurrently \"npm run start:stencil\" \"sleep 5 && npm run start:storybook\""
+    "start": "concurrently \"npm run start:stencil\" \"sleep 5 && npm run start:storybook\"",
+    "build": "npm run build:stencil && npm run build:storybook"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.4",
