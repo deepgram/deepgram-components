@@ -1,31 +1,22 @@
 {
-  "name": "deepgram-components",
+  "name": "@deepgram/web-components",
   "version": "0.0.1",
-  "description": "Deepgram Components with Stencil and Storybook",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.js",
-  "types": "dist/types/index.d.ts",
-  "collection": "dist/collection/collection-manifest.json",
-  "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/deepgram-components/deepgram-components.esm.js",
+  "description": "Deepgram Web Components with Stencil and Storybook",
+  "types": "./dist/types/index.d.ts",
+  "main": "./dist/cjs/index.cjs.js",
+  "module": "./dist/esm/index.js",
+  "collection": "./dist/collection/collection-manifest.json",
+  "collection:main": "./dist/collection/index.js",
+  "unpkg": "./dist/deepgram-components/deepgram-components.esm.js",
   "exports": {
-    ".": {
-      "import": "./dist/components/index.js",
-      "types": "./dist/components/index.d.ts"
-    },
     "./deepgram-header": {
-      "import": "./dist/components/deepgram-header.js",
-      "types": "./dist/components/deepgram-header.d.ts"
-    },
-    "./loader": {
-      "import": "./loader/index.js",
-      "require": "./loader/index.cjs",
-      "types": "./loader/index.d.ts"
+      "types": "./dist/components/deepgram-header.d.ts",
+      "import": "./dist/components/deepgram-header.js"
     }
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/deepgram/deepgram-components.git"
+    "url": "git+https://github.com/deepgram/deepgram-components.git"
   },
   "files": [
     "dist/",

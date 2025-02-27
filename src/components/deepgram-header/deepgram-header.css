@@ -41,7 +41,7 @@
 
 .dg-header-wrapper {
   // Layout
-  width: 100dvw;
+  width: 100%;
 
   // Style
   border-bottom: 1px solid #2c2c33;
@@ -71,7 +71,7 @@
 .dg-header-container {
   padding: 1rem;
   display: none;
-  width: 100vw;
+  width: 100%;
   flex-direction: column-reverse;
   position: relative;
 }
@@ -104,7 +104,7 @@
 .dg-header-button {
   display: flex;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
 }
 
 .dg-header-button svg {
@@ -129,6 +129,7 @@
   background: #fff;
   color: #000;
   border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
 }
 
 @media (min-width: 768px) {
