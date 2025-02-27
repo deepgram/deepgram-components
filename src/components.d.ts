@@ -6,56 +6,64 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface DeepgramHeader {
         /**
-          * The first name
+          * The active site
          */
-        "first": string;
+        "active": 'playground' | 'console' | 'docs' | 'community';
         /**
-          * The last name
+          * Boolean to toggle debug mode
          */
-        "last": string;
+        "debug": boolean;
         /**
-          * The middle name
+          * Boolean to track if the menu is open
          */
-        "middle": string;
+        "isMenuOpen": boolean;
+        /**
+         * @deprecated use camelCase instead. Support for dash-casing will be removed in Stencil v5.
+         */
+        "is-menu-open"?: boolean;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLDeepgramHeaderElement extends Components.DeepgramHeader, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLDeepgramHeaderElement: {
+        prototype: HTMLDeepgramHeaderElement;
+        new (): HTMLDeepgramHeaderElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "deepgram-header": HTMLDeepgramHeaderElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface DeepgramHeader {
         /**
-          * The first name
+          * The active site
          */
-        "first"?: string;
+        "active"?: 'playground' | 'console' | 'docs' | 'community';
         /**
-          * The last name
+          * Boolean to toggle debug mode
          */
-        "last"?: string;
+        "debug"?: boolean;
         /**
-          * The middle name
+          * Boolean to track if the menu is open
          */
-        "middle"?: string;
+        "isMenuOpen"?: boolean;
+        /**
+         * @deprecated use camelCase instead. Support for dash-casing will be removed in Stencil v5.
+         */
+        "is-menu-open"?: boolean;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "deepgram-header": DeepgramHeader;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "deepgram-header": LocalJSX.DeepgramHeader & JSXBase.HTMLAttributes<HTMLDeepgramHeaderElement>;
         }
     }
 }
