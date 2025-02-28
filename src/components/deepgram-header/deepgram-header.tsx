@@ -107,7 +107,7 @@ export class DeepgramHeader {
                 rel="noopener noreferrer"
                 aria-label="Sign Up"
               >
-                <span>Sign Up</span>
+                <span>Free API key</span>
               </a>
             </slot>
           </nav>
