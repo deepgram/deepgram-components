@@ -1,6 +1,6 @@
 {
   "name": "@deepgram/web-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Deepgram Web Components with Stencil and Storybook",
   "types": "./dist/types/index.d.ts",
   "main": "./dist/cjs/index.cjs.js",
